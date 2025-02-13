@@ -1,21 +1,21 @@
-import type { Metadata } from "next";
-import { Sora, Space_Grotesk } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Sora, Space_Grotesk } from 'next/font/google';
+import './globals.css';
 
 const soraFont = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
-  weight: "variable",
+  subsets: ['latin'],
+  variable: '--font-sora',
+  weight: 'variable',
 });
 const spaceGroteskFont = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  weight: "variable",
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  weight: 'variable',
 });
 
 export const metadata: Metadata = {
-  title: "AI SaaS Landing Page",
-  description: "Created by Frontend Tribe",
+  title: 'Sphere.ai',
+  description: 'Boluwatife Adeyemi',
 };
 
 export default function RootLayout({
