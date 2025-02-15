@@ -45,7 +45,7 @@ const SELECTED = 0;
 export const Testimonials = () => {
   const [] = useState('');
   return (
-    <section className="pb-[500px]">
+    <section className="">
       <div className="container">
         <SectionBorder borderTop>
           <SectionContent>
