@@ -23,7 +23,7 @@ export const pricingTiers = [
   {
     title: 'Premium',
     description: 'Advanced AI capabilities for enhanced productivity',
-    price: 99,
+    price: 990,
     buttonText: 'Upgrade to Premium',
     buttonVariant: 'secondary',
     features: [

@@ -5,6 +5,7 @@ import Features from '@/sections/Features';
 import Header from '@/sections/Header';
 import Hero from '@/sections/Hero';
 import Pricing from '@/sections/Pricing';
+import Testimonials from '@/sections/Testimonials';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Companies />
       <Features />
       <Pricing />
+      <Testimonials />
     </div>
   );
 }
