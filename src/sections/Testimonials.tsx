@@ -13,14 +13,14 @@ export const testimonials = [
   {
     quote:
       "Sphere AI has completely transformed the way we collaborate. The AI chatbot's ability to automate tasks and provide insightful recommendations has saved us hours each week. It's now an indispensable part of our workflow.",
-    name: 'Boniface Saraki',
+    name: 'Saraki Boniface',
     title: 'Operations Manager',
     image: boniface,
   },
   {
     quote:
       "Sphere AI integrates effortlessly with our existing tools, and the AI chatbot feels like a natural extension of our team. The responses are impressively accurate, and it's always learning from our interactions.",
-    name: 'Victor Osimhen',
+    name: 'Victor Ekubo',
     title: 'Operations Manager',
     image: victor,
   },
@@ -40,7 +40,7 @@ export const testimonials = [
   },
 ];
 
-const SELECTED = 2;
+const SELECTED = 0;
 
 export const Testimonials = () => {
   const [] = useState('');
@@ -52,7 +52,7 @@ export const Testimonials = () => {
             <div className="border-gradient rounded-3xl px-6 md:px-10 lg:px-16 py-16 lg:py-24 relative flex flex-col md:flex-row md:items-center gap-12 md:mx-10 lg:mx-20">
               <FontAwesomeIcon
                 icon={faQuoteLeft}
-                className="absolute size-20 text-violet-400 top-0 -translate-y-1/2 bg-neutral-950"
+                className="absolute size-20 text-violet-400 top-0 left-6 md:left-10 lg:left-16 -translate-y-1/2 bg-neutral-950"
               />
               {testimonials.map(({ name, quote, title, image }, index) => (
                 <React.Fragment key={name}>
