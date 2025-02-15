@@ -5,13 +5,15 @@ import underlineImg from '@/assets/images/underline.svg?url';
 import Loader from '@/assets/images/loader.svg';
 import Orbit from '@/components/Orbit';
 import Planet from '@/components/Planet';
+import SectionBorder from '@/components/SectionBorder';
+import SectionContent from '@/components/SectionContent';
 
 export const Hero = () => {
   return (
     <section>
       <div className="container">
-        <div className="border-x border-[var(--color-border)]">
-          <div className="container py-24 md:py-36 lg:py-48 relative isolate overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
+        <SectionBorder>
+          <SectionContent className="relative isolate overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
             <div className="absolute -z-10 inset-0 bg-[radial-gradient(circle_farthest-corner,var(--color-fuchsia-900)_50%,var(--color-indigo-900)_75%,transparent)] [mask-image:radial-gradient(circle_farthest-side,black,transparent)]"></div>
             <div className="absolute inset-0 -z-10">
               <div className="absolute-center">
@@ -91,7 +93,7 @@ export const Hero = () => {
               <div className="absolute top-[50%] right-0 z-10 translate-x-10 hidden lg:block">
                 <div className="bg-gray-800/70 backdrop-blur-md border-gray-700 rounded-xl p-4 w-72">
                   <div>
-                    <strong>brainwave: </strong> 1 just created one for you.
+                    <strong>brainwave: </strong> I just created one for you.
                     Check it out!
                   </div>
                   <div className="text-right text-gray-400 text-sm font-semibold">
@@ -103,8 +105,11 @@ export const Hero = () => {
                 <Image src={robotImg} alt="robot image" />
               </div>
             </div>
-          </div>
-        </div>
+          </SectionContent>
+        </SectionBorder>
+        {/* <div className="border-x border-[var(--color-border)]"> */}
+
+        {/* </div> */}
       </div>
     </section>
   );
