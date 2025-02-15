@@ -1,5 +1,6 @@
 'use client';
 
+import CallToAction from '@/sections/CallToAction';
 import Companies from '@/sections/Companies';
 import Features from '@/sections/Features';
 import Header from '@/sections/Header';
@@ -16,6 +17,7 @@ export default function Home() {
       <Features />
       <Pricing />
       <Testimonials />
+      <CallToAction />
     </div>
   );
 }
