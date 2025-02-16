@@ -6,6 +6,7 @@ import OutsideLogo from '../assets/images/outside-logo.svg';
 import CelestialLogo from '../assets/images/celestial-logo.svg';
 import SectionBorder from '@/components/SectionBorder';
 import SectionContent from '@/components/SectionContent';
+import { motion } from 'framer-motion';
 
 export const companies = [
   {
@@ -44,13 +45,22 @@ export const Companies = () => {
               Empowering creators at leading companies
             </h2>
             <div className="flex mt-20 overflow-x-clip -mx-4 lg:-mx-8">
-              <div className="flex flex-none gap-18 md:gap-36 px-18">
-                {companies.map(({ name, logo: Logo }) => (
-                  <div className="" key={name}>
+              <motion.div
+                className="flex flex-none gap-18 md:gap-36 px-9 md:px-18"
+                initial={{ x: 0 }}
+                animate={{ x: '-50%' }}
+                transition={{
+                  repeat: Infinity,
+                  ease: 'linear',
+                  duration: 10,
+                }}
+              >
+                {[...companies, ...companies].map(({ name, logo: Logo }, i) => (
+                  <div className="" key={name + i}>
                     <Logo className="h-8" />
                   </div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </SectionContent>
         </SectionBorder>
