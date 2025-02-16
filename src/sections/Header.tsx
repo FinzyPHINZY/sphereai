@@ -64,6 +64,14 @@ export const Header = () => {
                       href={href}
                       key={href}
                       className="h-full px-10 relative font-bold text-xs tracking-widest text-gray-400 uppercase inline-flex items-center before:content-[''] before:absolute before:bottom-0 before:h-2 before:w-px before:bg-gray-200/20 before:left-0 last:after:absolute last:after:bottom-0 last:after:h-2 last:after:w-px last:after:bg-gray-200/20 last:after:right-0 " //  after:content-[''] after:hidden last:after:block
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.querySelector(href);
+
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
                     >
                       {name}
                     </a>
@@ -127,6 +135,16 @@ export const Header = () => {
                   href={href}
                   className="text-gray-400 uppercase tracking-widest font-bold text-xs h-10"
                   key={name}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector(href);
+
+                    setIsOpen(false);
+
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                 >
                   {name}
                 </a>

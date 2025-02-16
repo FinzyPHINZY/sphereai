@@ -21,7 +21,7 @@ export const navItems = [
   },
   {
     name: 'Login',
-    href: '#login',
+    href: '#',
   },
 ];
 
@@ -55,6 +55,14 @@ export const Footer = () => {
                 href={href}
                 className="uppercase text-xs tracking-widest font-bold text-gray-400"
                 key={href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector(href);
+
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 {name}
               </a>
